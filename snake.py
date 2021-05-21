@@ -1,10 +1,10 @@
-exec(open("./settings.py").read())
+from settings import *
 
 
 def genfood(game_display_width,game_display_height,border,thicc,translation_vector,size):
         global r    
         r = randint(0,3)
-        return (randint(1,(game_display_width-border-thicc-1)/size)*size,randint(1,(game_display_height-border-thicc-1)/size)*size)
+        return (randint(1,int((game_display_width-border-thicc-1)/size))*size,randint(1,int((game_display_height-border-thicc-1)/size))*size)
 
 cibo = genfood(game_display_width,game_display_height,border,thicc,translation_vector,size)
 
@@ -188,8 +188,8 @@ while not gameExit:
             #        y_change = 0
     
     
-    if time.clock()-t0 > speed:
-        t0 = time.clock()
+    if time.process_time()-t0 > speed:
+        t0 = time.process_time()
         
         if direction != 0:
         

@@ -32,7 +32,7 @@ speed = 0.15
 snake_l = 4
 direction = 0
 snake = [ (randint(-10000, -1),randint(-10000, -1),0) for pieces in range (snake_l)]
-t0 = time.clock()
+t0 = time.process_time()
 r = randint(0,3)
 
 #head = [pygame.image.load('./snake-graphics/head_left.png'), pygame.image.load('./snake-graphics/head_left.png'),pygame.image.load('./snake-graphics/head_right.png'), pygame.image.load('./snake-graphics/head_up.png'), pygame.image.load('./snake-graphics/head_down.png')]
